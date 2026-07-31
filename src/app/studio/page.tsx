@@ -27,6 +27,16 @@ const MOODS: Record<Skin, string> = {
   google: 'Muted primaries',
   stripe: 'Blurple',
   uber: 'Mono + safety green',
+  oppenheimer: 'Ash + trinity bloom',
+  dune: 'Spice sand drift',
+  interstellar: 'Stars + accretion ring',
+  matrix: 'Digital rain',
+  f1: 'Carbon + speed lines',
+  ghibli: 'Pastel sky + seeds',
+  amazon: 'Smile-orange + arc',
+  apple: 'Monochrome spotlight',
+  airbnb: 'Coral + teal orbit',
+  spotify: 'Green + equalizer',
 };
 
 /**

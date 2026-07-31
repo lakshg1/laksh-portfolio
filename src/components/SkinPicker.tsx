@@ -13,7 +13,8 @@ import { SKINS, type Skin } from '@/content/skin';
 const GROUPS: { label: string; skins: Skin[] }[] = [
   { label: 'Core', skins: ['fog', 'plain'] },
   { label: 'Characters', skins: ['panther', 'spider', 'ironman', 'thor', 'cap', 'doom', 'breakingbad', 'peaky', 'starwars', 'minions', 'got'] },
-  { label: 'Companies', skins: ['netflix', 'hotstar', 'instagram', 'whatsapp', 'meta', 'microsoft', 'atlassian', 'google', 'stripe', 'uber'] },
+  { label: 'Cinema', skins: ['oppenheimer', 'dune', 'interstellar', 'matrix', 'f1', 'ghibli'] },
+  { label: 'Companies', skins: ['netflix', 'hotstar', 'instagram', 'whatsapp', 'meta', 'microsoft', 'atlassian', 'google', 'stripe', 'uber', 'amazon', 'apple', 'airbnb', 'spotify'] },
 ];
 
 export function SkinPicker() {

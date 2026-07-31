@@ -137,6 +137,16 @@ export const configuredSkin: Skin = 'fog';
 | `google` | Muted primaries | Four primary-color orbs drifting (no fog) |
 | `stripe` | Blurple haze | Skewed gradient ribbons drifting (no fog) |
 | `uber` | Monochrome + safety green | Route lines with traveling waypoint dots (no fog) |
+| `oppenheimer` | Ash monochrome + trinity orange | Falling ash + rare slow bloom |
+| `dune` | Spice ochre + stillsuit grey | Sand drifting sideways |
+| `interstellar` | Deep space + cornfield gold | Starfield + rotating accretion ring |
+| `matrix` | Phosphor green on black | Digital rain (no fog) |
+| `f1` | Carbon + racing red | Speed lines + pit stripes (no fog) |
+| `ghibli` | Pastel sky, forest + terracotta | Floating seeds on the wind |
+| `amazon` | Smile orange + navy | Breathing delivery arc (no fog) |
+| `apple` | Monochrome + product blue | A single quiet spotlight (no fog) |
+| `airbnb` | Coral + teal | Warm orbs in slow orbit (no fog) |
+| `spotify` | Signature green on near-black | Equalizer bars along the bottom (no fog) |
 
 ### Defaults — what a first-time visitor sees
 
@@ -202,7 +212,7 @@ restyle *their own view*, which is harmless. Nothing they do affects other visit
 3. Add a fog palette in `FogBackground.tsx` → `FOG_THEMES`.
 4. Optional: an effect layer in `SkinEffects.tsx`.
 5. **Check contrast.** Every accent must hit ≥4.5:1 against its background
-   (WCAG AA). All 22 shipped skins pass — the generator refuses to emit a failing palette; keep that bar.
+   (WCAG AA). All 33 shipped skins pass — the generator refuses to emit a failing palette; keep that bar.
 
 **A deliberate boundary:** skins are palette-and-mood only — no character imagery,
 logos or names in the UI. Copyrighted branding on a hiring portfolio is an IP risk
@@ -348,14 +358,12 @@ none — commit to 3 posts before building it.
 **6. Per-skin OG images (~2 hrs).** The share card matches the active deploy skin.
 Pure polish.
 
-**7. New skins (~30 min each).** The most fun lever, and fully recipe-ized — see
-"Adding a skin" above (SKINS array → two CSS blocks → fog palette or backdrop →
-optional effect → contrast check ≥4.5:1). Ideas parked for later: Oppenheimer
-(ash + monochrome), Dune (spice ochre + drifting sand), Interstellar (deep space +
-clock tick), Matrix (green rain — a classic for a reason), F1 (carbon + racing
-lines), Studio Ghibli (soft pastel clouds). Companies: Amazon, Apple, Airbnb,
-Spotify are unclaimed hue families. Keep the IP rule: palettes and moods, never
-logos or imagery.
+**7. New skins (~30 min each).** Fully recipe-ized — see "Adding a skin" above
+(SKINS array → two CSS blocks → fog palette or backdrop → optional effect →
+contrast check ≥4.5:1). The original parked ideas (Oppenheimer, Dune, Interstellar,
+Matrix, F1, Ghibli, Amazon, Apple, Airbnb, Spotify) have all shipped — 33 skins
+total. Still unclaimed if the itch returns: Blade Runner, Wes Anderson, Tron,
+Slack, Figma, Notion. Keep the IP rule: palettes and moods, never logos or imagery.
 
 **8. A `/uses` or `/now` page (~1 hr).** Developer-culture staples; cheap
 personality, occasionally sparks interview small talk.

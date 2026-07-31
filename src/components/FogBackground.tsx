@@ -97,6 +97,22 @@ const FOG_THEMES: Record<string, { light: Record<string, number>; dark: Record<s
     light: { highlightColor: 0xb3e0c9, midtoneColor: 0x9ad1b5, lowlightColor: 0x86c2a4, baseColor: 0xfcfdfc },
     dark: { highlightColor: 0x09994f, midtoneColor: 0x0a6b38, lowlightColor: 0x053d20, baseColor: 0x020302 },
   },
+  oppenheimer: {
+    light: { highlightColor: 0xd9d0c4, midtoneColor: 0xc4b8a8, lowlightColor: 0xa89a87, baseColor: 0xfdfcfa },
+    dark: { highlightColor: 0x6b6154, midtoneColor: 0x8f6b4a, lowlightColor: 0x33291f, baseColor: 0x060505 },
+  },
+  dune: {
+    light: { highlightColor: 0xe8d5ad, midtoneColor: 0xd9c290, lowlightColor: 0xc4a870, baseColor: 0xfefcf7 },
+    dark: { highlightColor: 0x8f6b33, midtoneColor: 0x5c4420, lowlightColor: 0x33250f, baseColor: 0x0a0703 },
+  },
+  interstellar: {
+    light: { highlightColor: 0xc4d4e8, midtoneColor: 0xb0c2d9, lowlightColor: 0x9cb0c9, baseColor: 0xfcfdfe },
+    dark: { highlightColor: 0x2b3d5c, midtoneColor: 0x16213d, lowlightColor: 0x0a1020, baseColor: 0x020304 },
+  },
+  ghibli: {
+    light: { highlightColor: 0xcfe4f0, midtoneColor: 0xf5d9d0, lowlightColor: 0xf0e8c4, baseColor: 0xfefdf8 },
+    dark: { highlightColor: 0x3d5a7a, midtoneColor: 0x6b4a5c, lowlightColor: 0x2b3a52, baseColor: 0x080b12 },
+  },
 };
 
 const FOG_BASE = {
@@ -122,6 +138,7 @@ function currentTheme(): 'light' | 'dark' {
 const FOGLESS = new Set([
   'plain', 'netflix', 'hotstar', 'instagram', 'whatsapp', 'meta',
   'microsoft', 'atlassian', 'google', 'stripe', 'uber',
+  'matrix', 'f1', 'amazon', 'apple', 'airbnb', 'spotify',
 ]);
 
 function currentSkin(): string {

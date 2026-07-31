@@ -55,6 +55,16 @@ export function SkinEffects() {
     case 'google': return <PrimaryOrbs />;
     case 'stripe': return <Ribbons />;
     case 'uber': return <RouteLines />;
+    case 'oppenheimer': return <AshAndBloom />;
+    case 'dune': return <SandDrift />;
+    case 'interstellar': return <Gargantua />;
+    case 'matrix': return <DigitalRain />;
+    case 'f1': return <SpeedLines />;
+    case 'ghibli': return <Seeds />;
+    case 'amazon': return <DeliveryArc />;
+    case 'apple': return <Spotlight />;
+    case 'airbnb': return <WarmOrbs />;
+    case 'spotify': return <Equalizer />;
     case 'plain':
     case null:
       return null;
@@ -398,6 +408,135 @@ function RouteLines() {
         <span key={i} className="bx-line" style={{ top: r.top }}>
           <span className="bx-dot" style={{ animationDuration: `${r.d}s`, animationDelay: `${r.delay}s` }} />
         </span>
+      ))}
+    </Layer>
+  );
+}
+
+/* ---------- Wave 3 ---------- */
+
+function AshAndBloom() {
+  const e = useRandomEvent(12000, 24000);
+  return (
+    <Layer>
+      {ASH.map((a, i) => (
+        <span key={i} className="fx-ash" style={{ left: a.left, animationDuration: `${a.d}s`, animationDelay: `${a.delay}s` }} />
+      ))}
+      {e && <span key={e.id} className="fx-bloom" />}
+    </Layer>
+  );
+}
+
+const SAND = [
+  { top: '22%', d: 12, delay: 0 }, { top: '38%', d: 16, delay: 4 }, { top: '55%', d: 11, delay: 8 },
+  { top: '68%', d: 15, delay: 2 }, { top: '82%', d: 13, delay: 6 }, { top: '30%', d: 18, delay: 10 },
+];
+function SandDrift() {
+  return (
+    <Layer>
+      {SAND.map((g, i) => (
+        <span key={i} className="fx-sand" style={{ top: g.top, animationDuration: `${g.d}s`, animationDelay: `${g.delay}s` }} />
+      ))}
+    </Layer>
+  );
+}
+
+function Gargantua() {
+  return (
+    <Layer>
+      {STARS.map((st, i) => (
+        <span key={i} className="fx-star" style={{ left: st.left, top: st.top, animationDuration: `${st.d}s`, animationDelay: `${st.delay}s` }} />
+      ))}
+      <span className="fx-accretion" />
+    </Layer>
+  );
+}
+
+const GLYPHS = 'アカサタナハマヤラワ0123456789';
+const RAIN = Array.from({ length: 14 }, (_, i) => ({
+  left: `${3 + i * 7}%`,
+  d: 7 + ((i * 5) % 9),
+  delay: ((i * 3) % 11) * 0.8,
+  text: Array.from({ length: 22 }, (_, j) => GLYPHS[(i * 7 + j * 3) % GLYPHS.length]).join(''),
+}));
+function DigitalRain() {
+  return (
+    <Layer>
+      {RAIN.map((c, i) => (
+        <span key={i} className="mx-col" style={{ left: c.left, animationDuration: `${c.d}s`, animationDelay: `${c.delay}s` }}>
+          {c.text}
+        </span>
+      ))}
+    </Layer>
+  );
+}
+
+function SpeedLines() {
+  const e = useRandomEvent(1600, 3800);
+  return (
+    <Layer>
+      <span className="f1-stripe" style={{ left: '18%' }} />
+      <span className="f1-stripe" style={{ left: '21%', opacity: 0.07 }} />
+      {e && <span key={e.id} className="f1-line" style={{ top: `${15 + e.r * 60}%` }} />}
+    </Layer>
+  );
+}
+
+const SEEDS = [
+  { left: '12%', d: 17, delay: 0 }, { left: '30%', d: 21, delay: 6 }, { left: '48%', d: 15, delay: 3 },
+  { left: '66%', d: 23, delay: 9 }, { left: '84%', d: 19, delay: 12 },
+];
+function Seeds() {
+  return (
+    <Layer>
+      {SEEDS.map((g, i) => (
+        <span key={i} className="gh-seed" style={{ left: g.left, animationDuration: `${g.d}s`, animationDelay: `${g.delay}s` }} />
+      ))}
+    </Layer>
+  );
+}
+
+function DeliveryArc() {
+  return (
+    <Layer>
+      <span className="az-arc" />
+      {MOTES.slice(0, 4).map((m, i) => (
+        <span key={i} className="fx-mote" style={{ left: m.left, top: m.top, animationDuration: `${m.d}s`, animationDelay: `${m.delay}s` }} />
+      ))}
+    </Layer>
+  );
+}
+
+function Spotlight() {
+  return (
+    <Layer>
+      <span className="ap-light" />
+    </Layer>
+  );
+}
+
+function WarmOrbs() {
+  return (
+    <Layer>
+      <div className="bx-orbit-frame" style={{ animationDuration: '58s' }}>
+        <span className="bx-orb" style={{ left: 0, top: 0, background: 'color-mix(in srgb, var(--color-accent) 24%, transparent)' }} />
+        <span className="bx-orb" style={{ right: 0, bottom: 0, background: 'color-mix(in srgb, var(--color-accent2) 22%, transparent)' }} />
+      </div>
+    </Layer>
+  );
+}
+
+const BARS = Array.from({ length: 30 }, (_, i) => ({
+  left: `${2 + i * 3.2}%`,
+  h: 6 + ((i * 13) % 16),
+  d: 1.6 + ((i * 7) % 10) * 0.22,
+  delay: ((i * 5) % 12) * 0.15,
+}));
+function Equalizer() {
+  return (
+    <Layer>
+      {BARS.map((b, i) => (
+        <span key={i} className="sp-bar" style={{ left: b.left, height: `${b.h}vh`, animationDuration: `${b.d}s`, animationDelay: `${b.delay}s` }} />
       ))}
     </Layer>
   );

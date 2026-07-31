@@ -27,6 +27,9 @@ export const SKINS = [
   // Company palettes — flip to match where you're applying.
   'netflix', 'hotstar', 'instagram', 'whatsapp', 'meta',
   'microsoft', 'atlassian', 'google', 'stripe', 'uber',
+  // Wave 3 — cinema + more companies
+  'oppenheimer', 'dune', 'interstellar', 'matrix', 'f1', 'ghibli',
+  'amazon', 'apple', 'airbnb', 'spotify',
 ] as const;
 export type Skin = (typeof SKINS)[number];
 
