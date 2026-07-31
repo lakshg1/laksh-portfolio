@@ -29,7 +29,7 @@ export function Nav() {
         <div className="flex items-center gap-[9px]">
           {/* SKIN PICKER — comment out the next line to hide it from visitors.
               /studio keeps working either way. */}
-          <SkinPicker />
+          {/* <SkinPicker /> */}
           <ThemeToggle />
           <a
             href={site.resumePath}
