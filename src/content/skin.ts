@@ -33,7 +33,7 @@ export const SKINS = [
 ] as const;
 export type Skin = (typeof SKINS)[number];
 
-export const configuredSkin: Skin = 'fog';
+export const configuredSkin: Skin = 'plain';
 
 export function resolveSkin(): Skin {
   const env = process.env.NEXT_PUBLIC_SKIN;
