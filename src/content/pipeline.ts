@@ -11,7 +11,7 @@ import type { PipelineStage } from './types';
 
 export const pipelineMeta = {
   heading: 'Brand DNA pipeline',
-  label: 'Kyko AI · ingestion architecture',
+  label: 'AI · ingestion architecture',
   /** Small live-looking badge, top right of the diagram. */
   badge: 'Resumable run lifecycle',
   /** The dashed rail beneath the nodes. */
