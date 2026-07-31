@@ -40,7 +40,7 @@ export const site = {
    * Shown next to the download button so recruiters know it is current.
    * `npm run resume <path-to-pdf>` updates the file AND this date for you.
    */
-  resumeUpdated: 'July 2026',
+  resumeUpdated: 'August 2026',
 
   /** Headline figures in the hero. Four or five reads best. */
   stats: [
