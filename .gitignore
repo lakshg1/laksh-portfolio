@@ -10,3 +10,9 @@ build/
 *.tsbuildinfo
 next-env.d.ts
 npm-debug.log*
+
+# local libSQL/SQLite database (dev only)
+/data/
+
+# private, undocumented admin notes
+ADMIN_NOTES.md
