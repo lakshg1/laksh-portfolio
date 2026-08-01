@@ -32,8 +32,11 @@ export const site = {
     github: 'https://github.com/lakshg1',
   },
 
-  /** Served from /public. Replace that file to update your résumé. */
-  resumePath: '/resume.pdf',
+  /**
+   * Served by /api/cv, which streams the latest CV you uploaded via /admin
+   * (prod-safe, DB-backed) and falls back to /public/resume.pdf if none exists.
+   */
+  resumePath: '/api/cv',
   /** Filename recruiters see when they download it. */
   resumeFilename: 'Laksh_Gupta_Resume.pdf',
   /**
